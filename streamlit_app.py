@@ -1,6 +1,6 @@
 
 import streamlit
-import pands
+import pandas
 
 streamlit.title('My parents new healthy dinner')
 
