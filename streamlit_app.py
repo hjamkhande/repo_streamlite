@@ -26,4 +26,5 @@ import requests
 
 fruitvicy_response=requests.get("https://www.fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruitvicy_response)
+streamlit.text(fruitvicy_response.json())
 
