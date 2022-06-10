@@ -26,14 +26,14 @@ streamlit.header('Fruityvice Fruit Advice')
 
 
 
-import requests
+#import requests
 
-fruitvicy_response=requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+#fruitvicy_response=requests.get("https://www.fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruitvicy_response)
 #streamlit.text(fruitvicy_response.json())
 # Displaying jSON data on application
-fruitvicy_normalize=pandas.json_normalize(fruitvicy_response.json())
-streamlit.dataframe(fruitvicy_normalize)
+#fruitvicy_normalize=pandas.json_normalize(fruitvicy_response.json())
+#streamlit.dataframe(fruitvicy_normalize)
 
 fruit_Choice=streamlit.text_input('What Fruit would you like information about ?','Kiwi')
 streamlit.write('user asks for',fruit_Choice)
