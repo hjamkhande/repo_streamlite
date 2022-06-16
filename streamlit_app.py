@@ -51,7 +51,7 @@ import snowflake.connector
 
 # Initialize connection.
 # Uses st.experimental_singleton to only run once.
-@st.experimental_singleton
+@streamlit.experimental_singleton
 def init_connection():
     return snowflake.connector.connect(**streamlit.secrets["snowflake"])
 
