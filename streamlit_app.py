@@ -47,7 +47,6 @@ streamlit.dataframe(fruitvicy_normalize)
 
 # Added Snowflake Connector
 import streamlit
-import pandas
 import sqlite3
 import snowflake.connector
 
