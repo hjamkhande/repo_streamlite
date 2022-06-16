@@ -48,25 +48,7 @@ streamlit.dataframe(fruitvicy_normalize)
 
 # Added Snowflake Connector
 
+myConn=snowflake.connector.connect(**streamlit.secrets["snowflake"])
+streamlit.text("Trying to connect Snowflake connector")
 
-# Initialize connection.
-# Uses st.experimental_singleton to only run once.
-@streamlit.experimental_singleton
-def init_connection():
-    return snowflake.connector.connect(**streamlit.secrets["snowflake"])
 
-conn = init_connection()
-
-# Perform query.
-# Uses st.experimental_memo to only rerun when the query changes or after 10 min.
-@streamlit.experimental_memo(ttl=600)
-def run_query(query):
-    with conn.cursor() as cur:
-        cur.execute(query)
-        return cur.fetchall()
-
-rows = run_query("SELECT * FROM FRUIT_LOAD_LIST;")
-
-# Print results.
-for row in rows:
-    streamlit.write(f"{row[0]} has a :{row[1]}:")
