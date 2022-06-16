@@ -52,5 +52,5 @@ import sqlite3
 import snowflake.connector
 
 my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"]
-curr=my_cnx.cursor()                                                           
+curr=my_cnx.cursor()                                                          
 curr.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
