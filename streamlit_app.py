@@ -50,8 +50,4 @@ streamlit.dataframe(fruitvicy_normalize)
 import snowflake.connector
 
 My_Conn=snowflake.connector.connect(**streamlit.secrets["snowflake"])
-MyCur=My_Conn.cursor()
-MyCur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 
-streamlit.text("Hello from Snowflake:")
-streamlit.text(rows)
