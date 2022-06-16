@@ -49,5 +49,3 @@ streamlit.dataframe(fruitvicy_normalize)
 
 import snowflake.connector
 
-My_Conn=snowflake.connector.connect(**streamlit.secrets["snowflake"])
-
