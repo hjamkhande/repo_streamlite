@@ -47,7 +47,7 @@ streamlit.dataframe(fruitvicy_normalize)
 
 
 # Added Snowflake Connector
-
+myConn=snowflake.connector.connect(**streamlit.secrets["snowflake"])
 
 streamlit.text("Trying to connect Snowflake connector")
 
